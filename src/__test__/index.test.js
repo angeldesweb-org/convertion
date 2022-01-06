@@ -1,5 +1,6 @@
-const { expect } = require("@jest/globals")
+const { num, bin, oct, hex } = require('../index');
+const { expect } = require('@jest/globals');
 
-it("initial test",() => {
-    expect(true).toBe(true);
-})
+it('', () => {
+	expect(true).toBe(true);
+});
