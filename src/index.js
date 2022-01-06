@@ -52,6 +52,7 @@ export const hex = (numero) => {
 			}
 			return isHex(numero);
 		},
+		convert: () => convert(numero, 'hex', 16),
 	};
 };
 
