@@ -42,9 +42,9 @@ describe('Conversión de hexadecimal a diferentes bases', () => {
 		expect(hex('a').convert().bin()).toBe('1010');
 	});
 	it('Hexadecimal a octal', () => {
-		expect(hex('10').convert().dec()).toBe('20');
+		expect(hex('10').convert().oct()).toBe('20');
 	});
-	it('Octal a decimal', () => {
-		expect(hex('f').convert().hex()).toBe(16);
+	it('Hexadecimal a decimal', () => {
+		expect(hex('f').convert().dec()).toBe(15);
 	});
 });
