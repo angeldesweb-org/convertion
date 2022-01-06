@@ -23,6 +23,8 @@
 		"eslint-config-prettier": "^8.3.0",
 		"eslint-plugin-import": "^2.25.4",
 		"jest": "^27.4.5",
+		"jsdoc": "^3.6.7",
+		"jsdoc-to-markdown": "^7.1.0",
 		"nodemon": "^2.0.15",
 		"prettier": "^2.5.1"
 	}
