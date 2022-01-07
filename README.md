@@ -1,20 +1,12 @@
-<style>
-    @import url('//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
- 
-.isa_info, .isa_success, .isa_warning, .isa_error {
-margin: 10px 0px;
-padding:12px;
-}
-.isa_info {
-    color: #00529B;
-    background-color: #BDE5F8;
-}
-</style>
-
 # Convertion
 
 Librería simple para conversiones de bases numéricas.
+
+---
+
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
+---
 
 ## Contenido
 
@@ -57,10 +49,7 @@ const binary = num(10).convert().bin(); // returns '1010'
 const hexa = bin('1010').convert().dec(); // returns 10
 ```
 
-<div class="isa_info">
-    <i class="fa fa-info-circle"></i>
-    ✋ ¿Te fijaste? A pesar de que el método num utiliza de convert el método bin para la conversión, bin para hacer la conversión a decimal utiliza de convert el método dec.
-</div>
+> ✋ ¿Te fijaste? A pesar de que el método num utiliza de convert el método bin para la conversión, bin > para hacer la conversión a decimal utiliza de convert el método dec.
 
 > Esto significa que los métodos que retorna convert no son los mismos handlers. [Saber más](docs/index.html)
 
