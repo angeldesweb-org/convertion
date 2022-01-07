@@ -13,6 +13,9 @@ padding:12px;
 
 # Convertion
 
+Librería simple para conversiones de bases numéricas.
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
 ## Contenido
 
 - [Descripción](#descripcion)
@@ -203,3 +206,11 @@ De momento me encuentro trabajando por mi cuenta en este proyecto. Si deseas con
 ## Licencia
 
 [MIT](http://https://github.com/angeldesweb-org/convertion/blob/master/LICENSE)
+
+---
+
+## Donaciones
+
+Si deseas apoyarme para continuar desarrollando más librerías y mejorando las existentes puedes hacerlo por el siguiente link.
+
+[!["Buy Me A Coffee"](https://www.buymeacoffee.com/assets/img/custom_images/orange_img.png)](https://paypal.me/angeldesweb)

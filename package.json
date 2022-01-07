@@ -1,18 +1,18 @@
 {
 	"name": "convertion",
 	"version": "0.0.1",
-	"main": "dist/index.js",
+	"description": "Librería simple para conversiones de bases numéricas.",
+	"main": "index.js",
 	"scripts": {
-		"build": "babel src --out-dir dist",
+		"build": "babel src --out-dir dist --ignore **/*.test.js",
 		"dev": "nodemon --exec npx babel-node src/index.js",
 		"docs": "jsdoc src -r -c ./jsdoc.conf.json -t ./node_modules/ink-docstrap/template -R README.md -d docs",
 		"start": "node dist/index.js",
 		"test": "jest",
 		"test:watch": "jest --watch"
 	},
-	"repository": {
-		"type": "git"
-	},
+	"repository": "https://github.com/angeldesweb-org/convertion.git",
+	"homepage": "",
 	"author": "angeldesweb <angeldesweb@gmail.com>",
 	"license": "MIT",
 	"devDependencies": {

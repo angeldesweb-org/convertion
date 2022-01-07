@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
+	<title>Convertion Index</title>
+
+	<!--[if lt IE 9]>
+	<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+	<link type="text/css" rel="stylesheet" href="styles/sunlight.default.css">
+
+	<link type="text/css" rel="stylesheet" href="styles/site.slate.css">
+
+</head>
+
+<body>
+
+<div class="navbar navbar-default navbar-fixed-top ">
+<div class="container">
+	<div class="navbar-header">
+		<a class="navbar-brand" href="index.html">Convertion</a>
+		<button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#topNavigation">
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+        </button>
+	</div>
+	<div class="navbar-collapse collapse" id="topNavigation">
+		<ul class="nav navbar-nav">
+			
+			<li class="dropdown">
+				<a href="modules.list.html" class="dropdown-toggle" data-toggle="dropdown">Modules<b class="caret"></b></a>
+				<ul class="dropdown-menu ">
+					<li><a href="module-Main_Converter.html">Main_Converter</a></li><li><a href="module-Handlers.html">Handlers</a></li><li><a href="module-Validations.html">Validations</a></li>
+				</ul>
+			</li>
+			
+		</ul>
+        
+	</div>
+
+</div>
+</div>
+
+
+<div class="container" id="toc-content">
+<div class="row">
+
+	
+	<div class="col-md-8">
+	
+		<div id="main">
+			
+
+	
+	
+
+
+
+
+
+
+
+
+
+
+
+	
+	
+
+
+
+
+
+    <section class="readme-section">
+        <article><style>
+    @import url('//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
+ 
+.isa_info, .isa_success, .isa_warning, .isa_error {
+margin: 10px 0px;
+padding:12px;
+}
+.isa_info {
+    color: #00529B;
+    background-color: #BDE5F8;
+}
+</style>
+<h1>Convertion</h1>
+<h2>Contenido</h2>
+<ul>
+<li><a href="#descripcion">Descripción</a></li>
+<li><a href="#instalaci%C3%B3n">Instalacion</a></li>
+<li><a href="#guia-de-uso">Guia de uso</a>
+<ul>
+<li><a href="#handlers">Handlers</a>
+<ul>
+<li><a href="#handler-num">num</a></li>
+<li><a href="#handler-bin">bin</a></li>
+<li><a href="#handler-oct">oct</a></li>
+<li><a href="#handler-hex">hex</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h2>Descripción</h2>
+<p>Convertion es una pequeña librería en fase de desarrollo para conversión entre bases numéricas. De momento solo cubre conversiones entre bases binario, octal, decimal y hexadecimal. A medida de lo posible intentaré aportar mayor cantidad de métodos a esta librería, con el fin de que tenga un amplio rango de conversiones</p>
+<hr>
+<h2>Instalación</h2>
+<p>Solo se necesita tener instalado <strong>node.js</strong> y <strong>npm</strong></p>
+<pre class="prettyprint source lang-sh"><code>npm install convertion
+</code></pre>
+<hr>
+<h2>🚀 Guia de uso</h2>
+<p>La manera mas simple de usar convertion es.</p>
+<pre class="prettyprint source lang-js"><code>import { bin, num } from 'convertion';
+
+const binary = num(10).convert().bin(); // returns '1010'
+
+const hexa = bin('1010').convert().dec(); // returns 10
+</code></pre>
+<div class="isa_info">
+    <i class="fa fa-info-circle"></i>
+    ✋ ¿Te fijaste? A pesar de que el método num utiliza de convert el método bin para la conversión, bin para hacer la conversión a decimal utiliza de convert el método dec.
+</div>
+<blockquote>
+<p>Esto significa que los métodos que retorna convert no son los mismos handlers. <a href="docs/index.html">Saber más</a></p>
+</blockquote>
+<hr>
+<h2>Handlers</h2>
+<p>Estos son los 3 principales métodos de convertion. puedes visitar la <a href="doc/index.html">documentación</a> para conocer más.</p>
+<hr>
+<h3>Handler num</h3>
+<p>Este manejador recibe como parámetros solo expresiones numérica <code>123, 0b123, etc</code> las cuales convertirá en una expresión decimal. Nos devuelve solo el método convert.</p>
+<pre class="prettyprint source lang-js"><code>// Ejemplo
+let num = num(10).convert().hex();
+console.log(num);
+// returns a (string)
+
+let num = num(10).convert().bin();
+console.log(num);
+// returns 1010 (string)
+</code></pre>
+<hr>
+<h3>Handler bin</h3>
+<p>Este manejador recibe como parámetros solo expresiones numéricas de tipo string y binario <code>'0b1100', '110011', etc.</code>
+El Handler bin devuelve los validadores:</p>
+<ul>
+<li>isNumber(): que devuelve true en caso de ser un string numérico.</li>
+<li>isBinary() que devuelve true si la expresión sigue un patrón binario.</li>
+</ul>
+<p>También devuelve el método convert que desde bin nos devuelve tres métodos:</p>
+<ul>
+<li>dec() Retorna la expresión convertida a decimal.</li>
+<li>oct() Retorna la expresión convertida a octal.</li>
+<li>hex() Retorna la expresión convertida a hexadecimal.</li>
+</ul>
+<pre class="prettyprint source lang-js"><code>// Ejemplos
+
+let number = bin('1010').isNumber();
+console.log(number);
+//returns true
+
+let number = bin('Hello').isBinary();
+console.log(number);
+//returns false
+
+let bin = bin('1010').convert().hex();
+console.log(bin);
+// returns a (string)
+</code></pre>
+<p><a href="docs/module-Handlers.html">saber mas</a></p>
+<hr>
+<h3>Handler oct</h3>
+<p>Este manejador recibe como parámetros solo expresiones numéricas de tipo string y octal <code>'0o17', '752', etc.</code>
+El Handler oct devuelve los validadores:</p>
+<ul>
+<li>isNumber(): que devuelve true en caso de ser un string numérico.</li>
+<li>isOctal() que devuelve true si la expresión sigue un patrón octal.</li>
+</ul>
+<p>También devuelve el método convert que desde oct nos devuelve tres métodos:</p>
+<ul>
+<li>dec() Retorna la expresión convertida a decimal.</li>
+<li>bin() Retorna la expresión convertida a binario.</li>
+<li>hex() Retorna la expresión convertida a hexadecimal.</li>
+</ul>
+<pre class="prettyprint source lang-js"><code>// Ejemplos
+
+let number = oct('77').isNumber();
+console.log(number);
+//returns true
+
+let number = oct('Hello').isOctal();
+console.log(number);
+//returns false
+
+let oct = oct('20').convert().hex();
+console.log(oct);
+// returns 10 (string)
+</code></pre>
+<p><a href="docs/module-Handlers.html">saber mas</a></p>
+<hr>
+<h3>Handler hex</h3>
+<p>Este manejador recibe como parámetros solo expresiones numéricas de tipo string y hexadecimal <code>'0x1ff', '12ff', etc.</code>
+El Handler hex devuelve los validadores:</p>
+<ul>
+<li>isNumber(): que devuelve true en caso de ser un string numérico.</li>
+<li>ishHex() que devuelve true si la expresión sigue un patrón hexadecimal.</li>
+</ul>
+<p>También devuelve el método convert que desde hex nos devuelve tres métodos:</p>
+<ul>
+<li>dec() Retorna la expresión convertida a decimal.</li>
+<li>bin() Retorna la expresión convertida a binario.</li>
+<li>oct() Retorna la expresión convertida a octal.</li>
+</ul>
+<pre class="prettyprint source lang-js"><code>// Ejemplos
+
+let number = hex('77').isNumber();
+console.log(number);
+//returns true
+
+let number = hex('Hello').isHex();
+console.log(number);
+//returns false
+
+let hex = hex('a').convert().dec();
+console.log(hex);
+// returns 10 (number)
+</code></pre>
+<p><a href="docs/module-Handlers.html">saber mas</a></p>
+<hr>
+<h2>Contribuciones</h2>
+<p>De momento me encuentro trabajando por mi cuenta en este proyecto. Si deseas contribuir con gusto ajustamos una metodología y comenzamos a colaborarnos en equipo. Déjame un pull request o un correo a <a href="mailto:angeldesweg@gmail.com">angeldesweg@gmail.com</a></p>
+<hr>
+<h2>Autor</h2>
+<ul>
+<li><strong>Ángel Zamora</strong></li>
+</ul>
+<hr>
+<h2>Licencia</h2>
+<p><a href="http://https://github.com/angeldesweb-org/convertion/blob/master/LICENSE">MIT</a></p></article>
+    </section>
+
+
+
+
+
+
+
+		</div>
+	</div>
+
+	<div class="clearfix"></div>
+
+	
+		<div class="col-md-3">
+			<div id="toc" class="col-md-3 hidden-xs hidden-sm hidden-md"></div>
+		</div>
+	
+
+</div>
+</div>
+
+
+
+<footer>
+
+
+<span class="jsdoc-message">
+	Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.6.7</a>
+	
+		on 2022-01-06T23:29:53-08:00
+	
+	using the <a href="https://github.com/docstrap/docstrap">DocStrap template</a>.
+</span>
+</footer>
+
+<script src="scripts/docstrap.lib.js"></script>
+<script src="scripts/toc.js"></script>
+
+
+<script>
+$( function () {
+	$( "[id*='$']" ).each( function () {
+		var $this = $( this );
+
+		$this.attr( "id", $this.attr( "id" ).replace( "$", "__" ) );
+	} );
+
+	$( ".tutorial-section pre, .readme-section pre, pre.prettyprint.source" ).each( function () {
+		var $this = $( this );
+
+		var example = $this.find( "code" );
+		exampleText = example.html();
+		var lang = /{@lang (.*?)}/.exec( exampleText );
+		if ( lang && lang[1] ) {
+			exampleText = exampleText.replace( lang[0], "" );
+			example.html( exampleText );
+			lang = lang[1];
+		} else {
+			var langClassMatch = example.parent()[0].className.match(/lang\-(\S+)/);
+			lang = langClassMatch ? langClassMatch[1] : "javascript";
+		}
+
+		if ( lang ) {
+
+			$this
+			.addClass( "sunlight-highlight-" + lang )
+			.addClass( "linenums" )
+			.html( example.html() );
+
+		}
+	} );
+
+	Sunlight.highlightAll( {
+		lineNumbers : false,
+		showMenu : true,
+		enableDoclinks : true
+	} );
+
+	$.catchAnchorLinks( {
+        navbarOffset: 10
+	} );
+	$( "#toc" ).toc( {
+		anchorName  : function ( i, heading, prefix ) {
+			return $( heading ).attr( "id" ) || ( prefix + i );
+		},
+		selectors   : "#toc-content h1,#toc-content h2,#toc-content h3,#toc-content h4",
+		showAndHide : false,
+		smoothScrolling: true
+	} );
+
+	$( "#main span[id^='toc']" ).addClass( "toc-shim" );
+	$( '.dropdown-toggle' ).dropdown();
+
+    $( "table" ).each( function () {
+      var $this = $( this );
+      $this.addClass('table');
+    } );
+
+} );
+</script>
+
+
+
+<!--Navigation and Symbol Display-->
+
+
+<!--Google Analytics-->
+
+
+
+
+</body>
+</html>

@@ -176,3 +176,5 @@ export const num = (numb) => {
 		convert: () => convert(numb, 'dec', 10),
 	};
 };
+
+export { isNumber, isBinary, isOctal, isHex, convert };
