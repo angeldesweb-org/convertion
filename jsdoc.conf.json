@@ -1,0 +1,24 @@
+{
+	"tags": {
+		"allowUnknownTags": false
+	},
+	"source": {
+		"includePattern": ".+\\.js(doc)?$",
+		"excludePattern": "(^|\\/|\\\\)_"
+	},
+	"plugins": [],
+	"templates": {
+		"cleverLinks": true,
+		"monospaceLinks": false,
+		"theme": "slate",
+		"systemName": "Convertion",
+		"search": false,
+		"outputSourceFiles": false,
+		"outputSourcePath": false
+	},
+	"opts": {
+		"encoding": "utf8",
+		"lenient": false,
+		"sort": false
+	}
+}
