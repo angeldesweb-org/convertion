@@ -5,7 +5,7 @@
 	"scripts": {
 		"build": "babel src --out-dir dist",
 		"dev": "nodemon --exec npx babel-node src/index.js",
-		"docs": "jsdoc src -c ./jsdoc.conf.json -t ./node_modules/ink-docstrap/template -R README.md -d docs",
+		"docs": "jsdoc src -r -c ./jsdoc.conf.json -t ./node_modules/ink-docstrap/template -R README.md -d docs",
 		"start": "node dist/index.js",
 		"test": "jest",
 		"test:watch": "jest --watch"

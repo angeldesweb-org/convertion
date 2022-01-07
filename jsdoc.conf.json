@@ -11,7 +11,10 @@
 		"cleverLinks": true,
 		"monospaceLinks": false,
 		"theme": "slate",
-		"systemName": "Convertion"
+		"systemName": "Convertion",
+		"search": false,
+		"outputSourceFiles": false,
+		"outputSourcePath": false
 	},
 	"opts": {
 		"encoding": "utf8",
