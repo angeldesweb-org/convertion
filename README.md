@@ -51,13 +51,13 @@ const hexa = bin('1010').convert().dec(); // returns 10
 
 > ✋ ¿Te fijaste? A pesar de que el método num utiliza de convert el método bin para la conversión, bin > para hacer la conversión a decimal utiliza de convert el método dec.
 
-> Esto significa que los métodos que retorna convert no son los mismos handlers. [Saber más](/module-Handlers.html)
+> Esto significa que los métodos que retorna convert no son los mismos handlers. [Saber más](https://https://angeldesweb-org.github.io/convertionhttps://angeldesweb-org.github.io/convertion/module-Handlers.html)
 
 ---
 
 ## Handlers
 
-Estos son los principales métodos de convertion. puedes visitar la [documentación](/module-Handlers.html) para conocer más.
+Estos son los principales métodos de convertion. puedes visitar la [documentación](https://angeldesweb-org.github.io/convertion/module-Handlers.html) para conocer más.
 
 ---
 
@@ -108,7 +108,7 @@ console.log(bin);
 // returns a (string)
 ```
 
-[saber mas](/module-Handlers.html)
+[saber mas](https://angeldesweb-org.github.io/convertion/module-Handlers.html)
 
 ---
 
@@ -142,7 +142,7 @@ console.log(oct);
 // returns 10 (string)
 ```
 
-[saber mas](/module-Handlers.html)
+[saber mas](https://angeldesweb-org.github.io/convertion/module-Handlers.html)
 
 ---
 
@@ -176,7 +176,7 @@ console.log(hex);
 // returns 10 (number)
 ```
 
-[saber mas](/module-Handlers.html)
+[saber mas](https://angeldesweb-org.github.io/convertion/module-Handlers.html)
 
 ---
 
