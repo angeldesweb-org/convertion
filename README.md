@@ -57,7 +57,7 @@ const hexa = bin('1010').convert().dec(); // returns 10
 
 ## Handlers
 
-Estos son los principales métodos de convertion. puedes visitar la [documentación](https://angeldesweb-org.github.io/convertion/module-Handlers.html) para conocer más.
+Estos son los principales métodos de convertion. puedes visitar la [documentación](https://angeldesweb-org.github.io/convertion/index.html) para conocer más.
 
 ---
 
