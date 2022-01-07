@@ -51,7 +51,7 @@ const hexa = bin('1010').convert().dec(); // returns 10
 
 > ✋ ¿Te fijaste? A pesar de que el método num utiliza de convert el método bin para la conversión, bin > para hacer la conversión a decimal utiliza de convert el método dec.
 
-> Esto significa que los métodos que retorna convert no son los mismos handlers. [Saber más](https://https://angeldesweb-org.github.io/convertionhttps://angeldesweb-org.github.io/convertion/module-Handlers.html)
+> Esto significa que los métodos que retorna convert no son los mismos handlers. [Saber más](https://angeldesweb-org.github.io/convertionhttps://angeldesweb-org.github.io/convertion/module-Handlers.html)
 
 ---
 

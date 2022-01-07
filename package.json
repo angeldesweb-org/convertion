@@ -11,8 +11,15 @@
 		"test": "jest",
 		"test:watch": "jest --watch"
 	},
+	"keywords": [
+		"números",
+		"numbers",
+		"bases",
+		"math",
+		"convertions"
+	],
 	"repository": "https://github.com/angeldesweb-org/convertion.git",
-	"homepage": "",
+	"homepage": "https://angeldesweb-org.github.io/convertion/index.html",
 	"author": "angeldesweb <angeldesweb@gmail.com>",
 	"license": "MIT",
 	"devDependencies": {
