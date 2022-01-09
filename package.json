@@ -1,6 +1,6 @@
 {
 	"name": "convertion",
-	"version": "0.0.1",
+	"version": "0.0.2",
 	"description": "Librería simple para conversiones de bases numéricas.",
 	"main": "index.js",
 	"scripts": {
