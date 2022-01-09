@@ -4,7 +4,7 @@ Librería simple para conversiones de bases numéricas.
 
 ---
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://github.com/angeldesweb-org/convertion/blob/master/LICENSE)
 
 ---
 
@@ -51,7 +51,7 @@ const hexa = bin('1010').convert().dec(); // returns 10
 
 > ✋ ¿Te fijaste? A pesar de que el método num utiliza de convert el método bin para la conversión, bin > para hacer la conversión a decimal utiliza de convert el método dec.
 
-> Esto significa que los métodos que retorna convert no son los mismos handlers. [Saber más](https://angeldesweb-org.github.io/convertionhttps://angeldesweb-org.github.io/convertion/module-Handlers.html)
+> Esto significa que los métodos que retorna convert no son los mismos handlers. [Saber más](https://angeldesweb-org.github.io/convertion/module-Handlers.html)
 
 ---
 
@@ -108,7 +108,7 @@ console.log(bin);
 // returns a (string)
 ```
 
-[saber mas](https://angeldesweb-org.github.io/convertion/module-Handlers.html)
+[Saber mas](https://angeldesweb-org.github.io/convertion/module-Handlers.html)
 
 ---
 
@@ -142,7 +142,7 @@ console.log(oct);
 // returns 10 (string)
 ```
 
-[saber mas](https://angeldesweb-org.github.io/convertion/module-Handlers.html)
+[Saber mas](https://angeldesweb-org.github.io/convertion/module-Handlers.html)
 
 ---
 
@@ -176,13 +176,13 @@ console.log(hex);
 // returns 10 (number)
 ```
 
-[saber mas](https://angeldesweb-org.github.io/convertion/module-Handlers.html)
+[Saber mas](https://angeldesweb-org.github.io/convertion/module-Handlers.html)
 
 ---
 
 ## Contribuciones
 
-De momento me encuentro trabajando por mi cuenta en este proyecto. Si deseas contribuir con gusto ajustamos una metodología y comenzamos a colaborarnos en equipo. Déjame un pull request o un correo a <angeldesweg@gmail.com>
+De momento me encuentro trabajando por mi cuenta en este proyecto. Si deseas contribuir con gusto ajustamos una metodología y comenzamos a colaborarnos en equipo. Déjame un pull request o un correo a <angeldesweb@gmail.com>
 
 ---
 
@@ -194,7 +194,7 @@ De momento me encuentro trabajando por mi cuenta en este proyecto. Si deseas con
 
 ## Licencia
 
-[MIT](http://https://github.com/angeldesweb-org/convertion/blob/master/LICENSE)
+[MIT](https://github.com/angeldesweb-org/convertion/blob/master/LICENSE)
 
 ---
 
